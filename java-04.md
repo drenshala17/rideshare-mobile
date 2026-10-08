@@ -1,9 +1,5 @@
 # RideShare — Java 4 · Neon dhe PostgreSQL
 
-Ruaje këtë skedar si java-04.md pranë README, jashtë aplikacioni/.
-Plotëso të gjitha përgjigjet; hiqi shenjat [PLOTËSO].
-Mos vendos DATABASE_URL, pamje të kredencialeve ose të dhëna reale.
-
 ## Çfarë ndërtova
 
 Lista dhe detajet e RideShare tani i lexojnë udhëtimet nga databaza Neon PostgreSQL. Krijova lidhjen private me Neon në src/lib/db.ts duke përdorur variablën POSTGRES_URL. Në src/lib/udhetimet.ts krijova funksionet lexoUdhetimet() dhe gjejUdhetimin() që marrin të dhënat nga tabela udhetimet. Faqja kryesore dhe faqja e detajeve i lexojnë këto të dhëna nga databaza në vend të të dhënave fikse.
