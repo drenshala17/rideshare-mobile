@@ -2,11 +2,30 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { gjejUdhetimin } from "@/lib/udhetimet";
 
+export const dynamic = "force-dynamic";
+
 export default async function UdhëtimDetajet({
   params,
 }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const udhetim = gjejUdhetimin(id);
+  let udhetim;
+
+  try {
+    udhetim = await gjejUdhetimin(id);
+  } catch {
+    return (
+      <main className="detail-page">
+        <div className="detail-shell" role="alert">
+          <span className="status-badge unavailable">Lidhja dështoi</span>
+          <h1>Nuk u lidhëm me databazën</h1>
+          <p className="request-copy">Provo përsëri ose kthehu te lista.</p>
+          <Link className="primary-button" href="/">
+            Kthehu te lista <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </main>
+    );
+  }
 
   if (!udhetim) {
     notFound();
@@ -35,7 +54,7 @@ export default async function UdhëtimDetajet({
         </div>
 
         {kaVende ? (
-          <Link href={`/udhetimi/${udhetim.id}/kerko`} className="primary-button">
+          <Link href={`/udhetimi/${udhetim.id}/kerkesa`} className="primary-button">
             Kërko vend <span aria-hidden="true">→</span>
           </Link>
         ) : (
