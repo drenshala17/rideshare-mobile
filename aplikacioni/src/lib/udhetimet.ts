@@ -15,8 +15,7 @@ export async function lexoUdhetimet(): Promise<Udhetim[]> {
   const sql = getSql();
   const rows = await sql`
     SELECT id, nisja, destinacioni, ora, vendtakimi, vende
-    FROM udhetimet
-    ORDER BY id
+  FROM udhetimet ORDER BY id
   `;
 
   return rows as Udhetim[];

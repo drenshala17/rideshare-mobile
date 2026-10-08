@@ -10,7 +10,8 @@ export default async function Home() {
 
   try {
     udhetimet = await lexoUdhetimet();
-  } catch {
+  } catch  (error) {
+  console.error("DATABASE ERROR:", error);
     return (
       <main className={styles.page}>
         <section className={styles.emptyState} role="alert">
