@@ -49,6 +49,19 @@
   letter-spacing: -0.04em;
 }
 
+.hero .primary-button {
+  position: relative;
+  z-index: 1;
+  margin-top: 24px;
+  background: #fff;
+  color: var(--primary);
+}
+
+.hero .primary-button:hover {
+  background: #eef2ff;
+  color: var(--primary-dark);
+}
+
 .list {
   display: grid;
   gap: 16px;
