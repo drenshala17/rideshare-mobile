@@ -29,6 +29,23 @@ export default async function Kerkesa({
 
   if (!udhetim) notFound();
 
+  if (udhetim.vende === 0) {
+    return (
+      <main className="detail-page">
+        <div className="detail-shell">
+          <Link href={`/udhetimi/${udhetim.id}`} className="back-link">
+            <span aria-hidden="true">←</span> Kthehu te detajet
+          </Link>
+          <span className="status-badge unavailable">I plotë</span>
+          <h1>Nuk ka vende të lira</h1>
+          <p className="request-copy">
+            Ky udhëtim nuk pranon kërkesa të reja për momentin.
+          </p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="request-page">
       <div className="detail-shell">
