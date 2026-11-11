@@ -166,6 +166,87 @@ a:focus-visible {
   text-align: right;
 }
 
+.meeting-point {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(247, 249, 253, 0.75);
+}
+
+.meeting-point h2 {
+  font-size: 1.1rem;
+}
+
+.meeting-point label {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.meeting-point-row {
+  display: flex;
+  gap: 10px;
+}
+
+.meeting-point input {
+  min-width: 0;
+  flex: 1;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--foreground);
+  font: inherit;
+}
+
+.meeting-point input:focus {
+  border-color: var(--primary);
+  outline: 3px solid rgba(49, 88, 212, 0.15);
+}
+
+.meeting-point .primary-button {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.secondary-button {
+  width: fit-content;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primary);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background: #eef2ff;
+}
+
+.secondary-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.meeting-point-status,
+.confirmed-meeting-point {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.confirmed-meeting-point {
+  color: #167346;
+  font-weight: 700;
+}
+
 .request-copy {
   color: var(--muted);
   line-height: 1.6;
@@ -272,5 +353,10 @@ a:focus-visible {
 
   .detail-info span {
     text-align: left;
+  }
+
+  .meeting-point-row {
+    align-items: stretch;
+    flex-direction: column;
   }
 }

@@ -1,0 +1,15 @@
+{
+  "java": 8,
+  "title": "Vendtakimi manual dhe vendndodhja e telefonit",
+  "testPath": "/java-08-test",
+  "features": [
+    "Konfirmimi manual i vendtakimit",
+    "Vendndodhja e telefonit me navigator.geolocation.getCurrentPosition",
+    "Trajtimi i suksesit, refuzimit, mungesës së pozicionit dhe timeout-it"
+  ],
+  "data": {
+    "source": "local",
+    "containsRealCoordinates": false,
+    "containsSecrets": false
+  }
+}
