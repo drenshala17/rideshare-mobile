@@ -50,10 +50,10 @@ Përdora GitHub Copilot për ndihmë në implementimin e komponentit dhe ChatGPT
 
 ## Prova me një hyrje të re
 
-- **Hyrja që provova:** Shkrova “Bibloteka” dhe e konfirmova. Pastaj shkrova “Parkingu”, por nuk e shtypa butonin e konfirmimit.
-- **Parashikimi im para klikimit:** Vendtakimi i konfirmuar duhet të mbetet “Bibloteka” derisa ta konfirmoj hyrjen e re.
-- **Çfarë pashë realisht:** Vendtakimi i konfirmuar mbeti “Bibloteka”, ndërsa “Parkingu” nuk u ruajt si vendtakim i ri.
-- **Skedari dhe funksioni që e shpjegojnë:** `aplikacioni/src/components/Vendtakimi.tsx`, funksioni `konfirmoVendtakimin()` dhe gjendjet `teksti` dhe `vendtakimiKonfirmuar`.
-- **Çfarë kuptova ose korrigjova:** Kuptova se teksti që shkruaj nuk bëhet automatikisht vendtakim i konfirmuar. Duhet ta shtyp butonin “Konfirmo në telefon”.
+- Hyrja që provova: Shkrova "Bibloteka" dhe e konfirmova. Pastaj shkrova "Parkingu", por nuk e shtypa butonin e konfirmimit.
+- Parashikimi im para klikimit: Vendtakimi i konfirmuar duhet të mbetet "Bibloteka" derisa ta konfirmoj hyrjen e re.
+- Çfarë pashë realisht: Vendtakimi i konfirmuar mbeti "Bibloteka", ndërsa "Parkingu" nuk u ruajt si vendtakim i ri.
+- Skedari dhe funksioni që e shpjegojnë: `aplikacioni/src/components/Vendtakimi.tsx`, funksioni `konfirmoVendtakimin()` dhe gjendjet `teksti` dhe `vendtakimiKonfirmuar`.
+- Çfarë kuptova ose korrigjova: Kuptova se teksti që shkruaj nuk bëhet automatikisht vendtakim i konfirmuar. Duhet ta shtyp butonin "Konfirmo në telefon".
 
 Këtë pjesë e shpjegoj në klasë. Kontrolli automatik nuk verifikon vërtetësinë e provës.
