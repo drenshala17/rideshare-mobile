@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { KartaUdhetimi } from "@/components/KartaUdhetimi";
+import ListaUdhetimesh from "@/components/ListaUdhetimesh";
 import { lexoUdhetimet, type Udhetim } from "@/lib/udhetimet";
 import styles from "./page.module.css";
 
@@ -40,11 +40,7 @@ export default async function Home() {
           <p>Kontrollo përsëri më vonë.</p>
         </section>
       ) : (
-        <section className={styles.list}>
-          {udhetimet.map((udhetim) => (
-            <KartaUdhetimi key={udhetim.id} udhetim={udhetim} />
-          ))}
-        </section>
+        <ListaUdhetimesh udhetimet={udhetimet} />
       )}
     </main>
   );

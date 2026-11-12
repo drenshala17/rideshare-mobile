@@ -67,6 +67,75 @@
   gap: 16px;
 }
 
+.favorite-total {
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+
+.favorite-area {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 1;
+  margin: 0;
+  text-align: right;
+}
+
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--foreground);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.favorite-button:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.favorite-button:disabled {
+  cursor: default;
+  opacity: 0.78;
+}
+
+.favorite-star {
+  color: #d29a1f;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.favorite-message,
+.favorite-error {
+  margin-top: 8px;
+  max-width: 180px;
+  color: #167346;
+  font-size: 0.84rem;
+}
+
+.favorite-error {
+  color: #b54747;
+}
+
+.retry-button {
+  margin-top: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .emptyState {
   padding: 42px 24px;
   border: 1px solid var(--line);
@@ -91,6 +160,7 @@
 }
 
 .list :global(.trip-card) {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 220px;
