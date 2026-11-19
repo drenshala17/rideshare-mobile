@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { gjejUdhetimin } from "@/lib/udhetimet";
+import { KerkesaUdhetar } from "@/components/KerkesaLive";
 
 export const dynamic = "force-dynamic";
 
@@ -52,15 +53,12 @@ export default async function Kerkesa({
         <Link href={`/udhetimi/${udhetim.id}`} className="back-link">
           <span aria-hidden="true">←</span> Kthehu te detajet
         </Link>
-        <span className="status-badge pending">Kërkesë demonstruese</span>
-        <h1>Simulim: Në pritje</h1>
+        <span className="status-badge pending">Kërkesë udhëtimi</span>
+        <h1>{udhetim.nisja} → {udhetim.destinacioni}</h1>
         <p className="request-copy">
-          Kërkesa për <strong>{udhetim.nisja} → {udhetim.destinacioni}</strong> është duke u trajtuar.
+          Dërgo kërkesën te shoferi dhe prit përgjigjen pa rifreskuar faqen.
         </p>
-        <div className="notice">
-          <span className="notice-icon" aria-hidden="true">✓</span>
-          <p>Ky është vetëm një simulim. Asnjë kërkesë nuk ruhet apo dërgohet te shoferi.</p>
-        </div>
+        <KerkesaUdhetar udhetimId={udhetim.id} initialVende={udhetim.vende} />
       </div>
     </main>
   );

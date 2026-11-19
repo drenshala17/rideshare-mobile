@@ -252,6 +252,43 @@ a:focus-visible {
   line-height: 1.6;
 }
 
+.request-live,
+.driver-requests {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.connection-notice {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff4d8;
+  color: #9b6b12;
+  font-weight: 700;
+}
+
+.request-error {
+  color: #b54747;
+  line-height: 1.5;
+}
+
+.driver-request {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(247, 249, 253, 0.75);
+}
+
+.driver-request p {
+  margin-top: 4px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .primary-button {
   display: inline-flex;
   align-items: center;

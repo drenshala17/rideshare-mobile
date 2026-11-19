@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hyrja from "@/components/Hyrja";
+import { KerkesatShofer } from "@/components/KerkesaLive";
 import { profiliIm } from "@/lib/lejet";
 import { ruajOren } from "./actions";
 
@@ -50,6 +51,8 @@ export default async function Panel({
       )}
       <Hyrja brenda={Boolean(p)} />
       {p?.roli === "shofer" ? (
+        <>
+        <KerkesatShofer />
         <form action={ruajOren}>
           <h2>Ndrysho orën e udhëtimit tim</h2>
           <input type="hidden" name="id" value="2" />
@@ -61,6 +64,7 @@ export default async function Panel({
             nëse ID ndryshohet.
           </p>
         </form>
+        </>
       ) : (
         p && (
           <p>
@@ -72,7 +76,7 @@ export default async function Panel({
       <p>
         <Link href="/">Kthehu te udhëtimet</Link>
       </p>
-      <p>Kërkesa për vend mbetet simulim këtë javë.</p>
+      <p>Kërkesat për vend shfaqen dhe përditësohen automatikisht.</p>
     </main>
   );
 }
